@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <title>Boolean Table Generator</title>
+
+  <body>
+    <a href="https://github.com/RyuseiC/Boolean-Table-Generator">About</a>
+    <center>
+      <h1>Boolean Table Generator</h1>
+
+      <p style="display: inline-block">Boolean operators:</p>
+      <button id="sum" class='operator' onClick="operatorToInput(this);">+</button>
+      <button id="product" class='operator' onClick="operatorToInput(this);">·</button>
+      <button id="complement" class='operator' onClick="operatorToInput(this);">&oline;</button>
+      <p>
+      <input
+        id="boolean-function"
+        type="text"
+        maxlength="20"
+        placeholder="Enter a Boolean function"
+      />
+      <button id="generator" onClick="distinctLetters(); finishTable();">Generate</button>
+
+      <p>Base cases:</p>
+
+      <table id="sum-boolean-table">
+        <caption>
+          Sum
+        </caption>
+        <tr>
+          <th>x</th>
+          <th>y</th>
+          <th>x+y</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </table>
+      <table id="product-boolean-table">
+        <caption>
+          Product
+        </caption>
+        <tr>
+          <th>x</th>
+          <th>y</th>
+          <th>xy</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </table>
+      <table id="complement-boolean-table">
+        <caption>
+          Complement
+        </caption>
+        <tr>
+          <th>x</th>
+          <th>x̅</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+      </table>
+
+      <br /><br />
+
+      <table id="boolean-table">
+        <caption id="results"></caption>
+      </table>
+    </center>
+    <script src="app.js"></script>
+  </body>
+</html>
